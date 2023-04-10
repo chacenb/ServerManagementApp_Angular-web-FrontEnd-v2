@@ -26,8 +26,9 @@
                 </button>
 
                 <div class="dropdown">
-                    <a href="#" class="ml-2  dropdown-toggle" id="printFormats" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-print pt-2 h4"></i> 
+                    <a href="#" class="ml-2  dropdown-toggle" id="printFormats" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fas fa-print pt-2 h4"></i>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="printFormats">
                         <li><a class="dropdown-item" href="#" (click)="exportToPDF()">PDF</a></li>
@@ -37,14 +38,10 @@
                         <li><a class="dropdown-item" href="#" (click)="browserPrint()">default</a></li>
                     </ul>
                 </div>
-                <!-- <div>
-                    <a href="#"><i class="fas fa-print" (click)="browserPrint()"></i></a>
-                </div> -->
-
-
             </div>
         </div>
         <div class="card-body text-center mt-3">
+
             <!-- global container -->
             <ng-container *ngIf="(appState$ | async) as appState" [ngSwitch]="appState.dataState">
 
@@ -140,7 +137,6 @@
 
 
             </ng-container>
-
         </div>
     </div>
 </div>
@@ -152,7 +148,6 @@
             <h5>WHAT IS IMPLEMENTED IN THIS PROJECT ?</h5>
         </div>
         <hr>
-
         <ul class="list-group mt-3">
             <li class="list-group-item" *ngFor="let func of whatIsImplementedInThisProject.functionnalities">
                 <span style="font-weight: 500;">{{func.title}} </span> : {{func.description}}
