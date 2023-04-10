@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { BehaviorSubject, catchError, delay, map, Observable, of, startWith } from 'rxjs';
 import { ServerService } from '../core/services/apiService/server.service';
 import * as mod from '../core/models/models';
@@ -10,7 +10,8 @@ import { PrinterService } from '../core/services/utilsService/printerService/pri
 @Component({
   selector: 'app-features',
   templateUrl: './features.component.html',
-  styleUrls: ['./features.component.scss']
+  styleUrls: ['./features.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FeaturesComponent implements OnInit {
 
