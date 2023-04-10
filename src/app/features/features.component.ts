@@ -289,6 +289,7 @@ export class FeaturesComponent implements OnInit {
 
   @ViewChild('serversDataTable', { static: false }) private serversDataTable: ElementRef;
   filename: string = `serversList`;
+  browserPrint = () => { this.printer.defaultBrowserPrint(); }
   exportToPDF = () => { this.printer.printToPDF(this.serversDataTable.nativeElement, `${this.filename}.pdf`); }
   exportToEXCEL = () => { this.printer.printToEXCEL(this.serversDataTable.nativeElement, `${this.filename}.xlsx`); }
   exportToCSV = () => { this.printer.printToCSV(this.localDataSubj.value.data.servers, `${this.filename}.csv`); }

@@ -11,6 +11,9 @@ export class PrinterService {
 
   constructor() { }
 
+
+  defaultBrowserPrint() { window.print(); }
+
   printToPDF(data: any, fileName: string) {
     /* create a pdf with format options : can be customized LATER */
     let pdf = new jsPDF('l', "pt", 'a3');
