@@ -15,8 +15,6 @@ import { PrinterService } from '../core/services/utilsService/printerService/pri
 })
 export class FeaturesComponent implements OnInit {
 
-
-
   appState$: Observable<mod.AppState<mod.CustomResponse>>;
   readonly dataStates = mod.DataState;
   readonly Statuses = mod.Status;
