@@ -1,3 +1,13 @@
+<!--------------------------------------------------------------------->
+<!-- Better structuring angular app | folder structure -->
+<!--------------------------------------------------------------------->
+yt video link > https://www.youtube.com/watch?v=7SDpTOLeqHE&ab_channel=JoshuaMorony
+gitHub sample project > https://github.com/joshuamorony/nx-angular-structure/tree/main
+Summary:
+- global folders : 1) appShared, 2) appCore, 3) appFeatures
+- 1) subFolders : "uiComponents" each in its own basic module which directly export the component
+- every feature module is lazy loaded
+- ... check the src code for full structure details
 
 
 <!--------------------------------------------------------------------->
@@ -9,7 +19,7 @@
 
 
 <!--------------------------------------------------------------------->
-<!-- Use select tag with objects -->    
+<!-- Use select tag with objects -->
 <!--------------------------------------------------------------------->
 [in html file]--------------------
 <select [(ngModel)]="classProperty" (ngModelChange)="dataChanged($event)" name="data">
@@ -56,7 +66,7 @@ pathMatch: "full", redirectTo: "stock-client"
 <!--------------------------------------------------------------------->
 <!-- ERROR : There is no FormControl instance attached to form control element with name: -->
 <!--------------------------------------------------------------------->
-When this doesn't work  >>>>>>  formControlName="xxxxxxx"  
+When this doesn't work  >>>>>>  formControlName="xxxxxxx"
 USE this                >>>>>>  [formControl]="updateAffaireForm.controls['xxxxx']"
 
 
@@ -161,7 +171,7 @@ const obj = {
         address: { country: 'Chile', city: 'Santiago' },
     },
 };
-  
+
 const copy = JSON.parse(JSON.stringify(obj)) as typeof obj;
 
 
@@ -216,7 +226,7 @@ export class xxxxx implements OnInit, OnDestroy{
     import {interval, Subscription} from rxjs
     data$ = interval(1000);
     dataSubscription: SUbscription | undefined;
-    
+
     ngOnInit() {
         this.dataSubscription = this.data$.sunscribe((data)=>console.log('data', data);)
     }
